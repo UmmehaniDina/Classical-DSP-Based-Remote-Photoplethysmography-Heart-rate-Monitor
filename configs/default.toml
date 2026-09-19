@@ -1,0 +1,79 @@
+# Reference defaults for the classical rPPG monitor.
+
+[camera]
+source = "0"
+backend = "auto"
+requested_width = 640
+requested_height = 480
+requested_fps = 30
+
+[roi]
+mode = "multi"
+min_valid_roi_area_pixels = 50
+min_valid_skin_pixels_per_roi = 5
+min_valid_skin_pixels_total = 20
+landmark_padding_px = 5
+skin_y_min = 35
+skin_cr_min = 133
+skin_cr_max = 180
+skin_cb_min = 77
+skin_cb_max = 135
+robust_mean_low_percentile = 10.0
+robust_mean_high_percentile = 90.0
+skin_mask_strategy = "fixed"
+adaptive_chroma_percentile = 10.0
+adaptive_chroma_padding = 8
+temporal_adaptive_alpha = 0.20
+temporal_adaptive_min_updates = 12
+coordinate_smoothing_factor = 0.45
+use_landmark_polygon_masks = true
+max_landmark_motion = 0.025
+face_loss_reset_sec = 2.0
+
+[analysis]
+min_accepted_bpm = 55.0
+max_accepted_bpm = 200.0
+adaptive_half_bandwidth_hz = 0.55
+min_adaptive_bandwidth_hz = 0.90
+analysis_window_sec = 24.0
+min_warmup_sec = 16.0
+analysis_update_interval_sec = 1.0
+candidate_projection_window_sec = 1.6
+butterworth_order = 3
+filter_padtype = "odd"
+filter_transient_trim_sec = 0.0
+bpm_smoothing_factor = 0.18
+bpm_smoothing_time_constant_sec = 5.0
+bpm_history_sec = 120.0
+smoothness_priors_lambda = 80.0
+smoothness_priors_reference_fps = 30.0
+min_spectral_snr = 2.0
+max_bpm_jump_per_update = 18.0
+max_consecutive_low_quality_rejections = 3
+welch_window_sec = 8.0
+welch_min_segment_samples = 64
+welch_target_resolution_hz = 0.10
+peak_match_tolerance_bpm = 18.0
+peak_fusion_fft_weight = 0.70
+peak_fusion_peak_weight = 0.30
+peak_detect_both_polarities = true
+spectral_peak_exclusion_hz = 0.12
+spectral_refine_peak = true
+spectral_edge_penalty_hz = 0.08
+spectral_edge_penalty = 0.65
+harmonic_power_fraction = 0.55
+subharmonic_tolerance_hz = 0.08
+harmonic_tolerance_hz = 0.08
+harmonic_quality_bonus = 1.10
+pca_min_component_std = 1e-6
+pca_sign_min_abs_correlation = 0.10
+pca_sign_min_samples = 8
+enable_ica_candidate = false
+use_bpm_kalman_tracker = false
+kalman_initial_bpm = 75.0
+kalman_initial_variance = 100.0
+kalman_process_bpm_variance = 4.0
+kalman_process_rate_variance = 1.0
+kalman_measurement_variance = 16.0
+global_band_probe_enabled = true
+global_band_probe_min_quality_ratio = 1.15

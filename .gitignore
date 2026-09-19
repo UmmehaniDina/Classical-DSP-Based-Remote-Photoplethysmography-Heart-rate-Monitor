@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Matplotlib
+.mplconfig/
+
+# Local model files
+models/*.task
+models/*.download
+
+# Session outputs
+output/*
+!output/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+# Test/tool caches
+.pytest_cache/
+.pytest-*/
+
+# IDE
+.idea/
+.vscode/
+report_work/
+*.pdf
+BUET_Classical_rPPG_Final_Project_Report.docx
+Section_6_Reflection_on_Individual_and_Team_Work.docx
+
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+.env
+*.key
+*.pem
